@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a658a7b479.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/logo.png" />
+    <title>Algorithm Visualization</title>
+</head>
+
+<body>
+    <nav style="height:80px">
+        <div class='logo'><a href='index.html'>Vis<span>ualiser</span></a></div>
+
+        <label for='btn' class='icon'>
+            <span class='fa fa-bars'></span>
+        </label>
+        <input type='checkbox' id='btn' style="display: none;">
+        <ul>
+            <li><a href='./templates/sorting.html'>Sorting</a></li>
+            <li><a href='./templates/pathfinding.html'>Pathfinding</a></li>
+            <li><a href='./templates/searching.html'>Searching</a></li>
+    
+        </ul>
+    </nav>
+    <br>
+    <h1 class="container" ><i class="fa-regular fa-face-thinking" ></i></i><strong>Explore Awesome Algorithms !</strong></h1>
+    <br>
+    <div class="card-deck">
+
+        <script>
+            let cards = [{
+                title: "Sorting Algorithms",
+                link: "./templates/sorting.html",
+                image: "https://www.crio.do/blog/content/images/size/w1000/2022/02/Insertion-Sort.png",
+                alt: "Sorting image"
+            }, {
+                title: "Pathfinding Algorithms",
+                link: "./templates/pathfinding.html",
+                image: "./img/path.jpg",
+                alt: "Pathfinding image"
+            }, {
+                title: "Searching Algorithms",
+                link: "./templates/searching.html",
+                image: "./img/search.jpg",
+                alt: "Searching image"
+            }]
+
+            for (i = 0; i < cards.length; i++) {
+                card = cards[i]
+                card_template = `
+                     <div class="card">
+                        <a href=${card.link}><img class="card-image" src=${card.image} alt=${card.alt}></a>
+                        <div class="container">
+                            <div class="card-title">
+                                <h2>${card.title}</h2>
+                            </div>
+                            <div class="card-buttons">
+                                <button class="btn-danger"><a href=${card.link}>Visualize</a></button>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                `
+                document.querySelector(".card-deck").innerHTML += card_template;
+            };
+        </script>
+
+    </div>
+    <br>
+    <br>
+     <!-- Bootstrap JS -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+     crossorigin="anonymous"></script>
+     <div class="footer-bottom">
+        &copy; Designed and Developed by Three Expertise
+    </div>
+     
+
+</body>
+
+</html>
